@@ -43,13 +43,10 @@ jobs:
         env:
           ARTIFACTORY_URL: ${{ secrets.JFROG_URL }}/artifactory
         run: |
-          cd demo-project
           mvn compile --no-transfer-progress -B \
             -Dmaven.wagon.http.retryHandler.count=0
 
       # This step only runs if build succeeds (it won't in the demo)
       - name: Run tests
         if: success()
-        run: |
-          cd demo-project
-          mvn test --no-transfer-progress -B
+        run: mvn test --no-transfer-progress -B

@@ -22,7 +22,7 @@
   -->
   <repositories>
     <repository>
-      <id>jfrog-demo-mirror</id>
+      <id>jfrog-demo</id>
       <name>JFrog Demo Artifactory</name>
       <url>${env.ARTIFACTORY_URL}/demo-libs-snapshot-virtual</url>
       <releases><enabled>true</enabled></releases>
@@ -35,7 +35,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>6.1.2</version>
+      <version>6.1.99</version>
     </dependency>
   </dependencies>
 

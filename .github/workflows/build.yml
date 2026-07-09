@@ -27,9 +27,16 @@ jobs:
           mkdir -p ~/.m2
           cat > ~/.m2/settings.xml << 'EOF'
           <settings>
+            <mirrors>
+              <mirror>
+                <id>jfrog-demo-mirror</id>
+                <mirrorOf>*</mirrorOf>
+                <url>${env.ARTIFACTORY_URL}/demo-libs-snapshot-virtual</url>
+              </mirror>
+            </mirrors>
             <servers>
               <server>
-                <id>jfrog-demo</id>
+                <id>jfrog-demo-mirror</id>
                 <username>${{ secrets.JFROG_USER }}</username>
                 <password>${{ secrets.JFROG_TOKEN }}</password>
               </server>

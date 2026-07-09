@@ -22,7 +22,7 @@
   -->
   <repositories>
     <repository>
-      <id>jfrog-demo</id>
+      <id>jfrog-demo-mirror</id>
       <name>JFrog Demo Artifactory</name>
       <url>${env.ARTIFACTORY_URL}/demo-libs-snapshot-virtual</url>
       <releases><enabled>true</enabled></releases>

@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Maven Build
-    runs-on: ubuntu-latest
+    runs-on: incredibuild-runner
 
     steps:
       - name: Checkout
